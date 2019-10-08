@@ -1,0 +1,22 @@
+{
+  "functions": {
+    "predeploy": [
+    ]
+  },
+  "hosting": {
+    "site": "performero-stacks-react",
+    "public": "dist/browser",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "index.html",
+      "**/node_modules/**"
+    ], 
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "reactSSR"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "performero-react",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "ignore-styles": "^5.0.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "build:function": "webpack --config webpack.server-function.config.js --progress --colors",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "postbuild": "node cp-dist.js",
+    "deploy:firebase": "npm run build && npm run build:function && cd functions && npm run build && cd ../ && firebase deploy"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "html-loader": "^0.5.5",
+    "ignore-loader": "^0.1.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

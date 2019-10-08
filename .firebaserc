@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "performero-stacks"
+  },
+  "targets": {
+    "performero-stacks": {
+      "hosting": {
+      }
+    }
+  }
+}
